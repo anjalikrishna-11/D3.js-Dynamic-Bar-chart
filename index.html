@@ -1,0 +1,40 @@
+<!--Anjali Krishna (U35346496)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3.js Bar Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        /* Style for the bars */
+        .bar {
+            fill: steelblue;
+        }
+        /* Style for the bars on hover */
+        .bar:hover {
+            fill: orange;
+        }
+        /* Style for the labels inside the bars */
+        .label {
+            fill: white;
+            font-size: 12px;
+            text-anchor: end;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Define the dataset
+        const dataset = [100, 420, 230, 850, 560, 925];
+
+        // Define SVG dimensions
+        const svgWidth = 500;
+        const barHeight = 20;
+        const barMargin = 1;
+        const svgHeight = (barHeight + barMargin) * dataset.length;
+
+        // Create SVG container
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", svgWidth)
+            .attr("height", svgHeight);
