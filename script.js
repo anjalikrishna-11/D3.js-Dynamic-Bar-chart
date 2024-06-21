@@ -4,7 +4,7 @@
 // Configure linear scale for bar widths
 const xScale = d3.scaleLinear()
     .domain([0, d3.max(dataset)])
-    .range([50, svgWidth]);
+    .range([50, 500]);
 
 // Render bars and group elements based on scaled data
 const barGroups = svg.selectAll("g")
