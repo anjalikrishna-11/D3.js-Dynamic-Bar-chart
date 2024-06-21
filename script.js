@@ -28,5 +28,19 @@ barGroups.append("text")
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
     .text(d => d);
+// Add hover effects
+barGroups.selectAll("rect")
+    .on("mouseover", function() {
+        d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("fill", "orange");
+    })
+    .on("mouseout", function() {
+        d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("fill", "steelblue");
+    });
 
 
